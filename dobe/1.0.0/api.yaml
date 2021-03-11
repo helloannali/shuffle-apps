@@ -4,6 +4,10 @@ name: dobe
 description: dobe
 tags:
 categories:
+contact_info:
+  name: "@frikkylikeme"
+  url: https://github.com/frikky
+  email: "frikky@shuffler.io"
 actions:
   - name: hello_world
     description: show message
