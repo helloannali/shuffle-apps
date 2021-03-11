@@ -4,6 +4,8 @@ FROM frikky/shuffle:app_sdk as base
 # We're going to stage away all of the bloat from the build tools so lets create a builder stage
 FROM base as builder
 
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
 # Install all alpine build tools needed for our pip installs
 RUN apk --no-cache add --update alpine-sdk libffi libffi-dev musl-dev openssl-dev
 
